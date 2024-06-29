@@ -1,5 +1,6 @@
 .whyOrder {
-    background-image: url(../../images/Bg-whyOrder.png);
+  filter: saturate(1.3);
+  background-image: url(../../images/main_bg_prise.png);
   }
   
   .whyOrder h2 {
