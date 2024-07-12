@@ -1,4 +1,4 @@
-nav{
+nav {
   height: 50px;
   display: flex;
   align-items: center;
@@ -6,7 +6,7 @@ nav{
   filter: drop-shadow(2px 3.464px 3.5px #95aeb6);
 }
 
-nav ul{
+nav ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,7 +14,7 @@ nav ul{
   list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
   text-transform: uppercase;
   padding: 13px 17px;
   font-size: 20px;
@@ -26,16 +26,161 @@ nav ul li a{
   text-decoration: none;
 }
 
-nav .border_li::after{
-  content: '';
+nav .border_li::after {
+  content: "";
   border: 2px solid var(--color_btn_send_message_hover);
   border-radius: 3px;
   position: relative;
   left: 10px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   background-color: var(--color_btn_send_message_hover);
   color: var(--color_btn_text_hover);
   box-shadow: -16px 0px 0px var(--color_btn_send_message_hover), 16px 0px 0px var(--color_btn_send_message_hover);
+}
+
+nav .goUpArrow {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  nav ul li a {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  nav .border_li::after {
+    left: 0;
+  }
+
+  nav ul li a:hover {
+    box-shadow: -5px 0px 0px var(--color_btn_send_message_hover), 4px 0px 0px var(--color_btn_send_message_hover);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  nav .login_and_chat a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  nav .login {
+    margin-right: 20px;
+  }
+
+  nav .login_and_chat {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  nav .login,
+  .live_chat {
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color_btn_text);
+    font-weight: 400;
+    font-family: Roboto_Regular;
+  }
+
+  nav .login:hover,
+  nav .live_chat:hover {
+    color: #063a69;
+  }
+
+  nav .login::after {
+    content: "";
+    display: inline-block;
+    background-image: url(../../images/Login.svg);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+  }
+  nav .live_chat::after {
+    content: "";
+    display: inline-block;
+    background-image: url(../../images/Chat.svg);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+  }
+
+  nav .login:hover::after {
+    background-image: url(../../images/Login3.svg);
+  }
+
+  nav .live_chat:hover::after {
+    background-image: url(../../images/Chat3.svg);
+  }
+
+  nav .hamburger {
+    cursor: pointer;
+  }
+
+  nav .goUpArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #013056;
+    border: 3px solid #789dbb;
+
+    position: fixed;
+    top: 3555px;
+    right: 120px;
+  }
+
+  nav .goUpArrow:hover {
+    box-shadow: 2px 2px 2px #b2d2ec, -2px -2px 2px #b2d2ec, -2px 2px 2px #b2d2ec, 2px -2px 2px #b2d2ec;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  nav {
+    height: auto;
+    padding: 5px 0;
+  }
+
+  nav .phone-sm {
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav .phone-sm > span {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  nav .phone-sm > span:hover,
+  nav .phone-sm > span:hover a {
+    font-weight: 400;
+    font-family: Roboto_Regular;
+  }
+
+  nav .phone-sm > span:first-child {
+    margin-bottom: 4px;
+  }
+
+  nav .phone-sm span,
+  nav .phone-sm a {
+    font-size: 18px;
+    color: #caddea;
+    font-weight: 250;
+    font-family: Roboto_Thin;
+    text-decoration: none;
+  }
 }
